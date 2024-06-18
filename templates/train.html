@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Brain Disease Prediction - Train Models{% endblock %}
+
+{% block content %}
+<h1>Train Models</h1>
+<form method="post">
+    <button type="submit" class="btn btn-primary">Train Models</button>
+</form>
+
+{% if reports %}
+    <h2>Training Reports</h2>
+    {% for model, report in reports.items() %}
+        <h3>{{ model }}</h3>
+        <pre>{{ report }}</pre>
+    {% endfor %}
+{% endif %}
+{% endblock %}

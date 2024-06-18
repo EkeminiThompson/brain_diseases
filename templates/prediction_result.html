@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+    <h1>Prediction Result</h1>
+    <h3>Random Forest Prediction:</h3>
+    <p>{{ predictions['RandomForest'] }}</p>
+    <h3>Logistic Regression Prediction:</h3>
+    <p>{{ predictions['LogisticRegression'] }}</p>
+    <h3>VAE Prediction:</h3>
+    <p>{{ predictions['VAE'] }}</p>
+{% endblock %}

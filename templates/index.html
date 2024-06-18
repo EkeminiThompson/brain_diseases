@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Brain Disease Prediction - Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the Brain Disease Prediction System</h1>
+    <p class="lead">Here, you can explore various aspects of brain disease prediction using our integrated framework.</p>
+    <hr class="my-4">
+    <p>Learn more about how our system works and get started today!</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Data Shapes</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Explore the shapes of different datasets used in our prediction system:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Genomic Data Shape: {{ genomic_shape }}</li>
+                    <li class="list-group-item">Clinical Data Shape: {{ clinical_shape }}</li>
+                    <li class="list-group-item">Imaging Data Shape: {{ imaging_shape }}</li>
+                    <li class="list-group-item">Biomarker Data Shape: {{ biomarker_shape }}</li>
+                    <li class="list-group-item">Behavioral Data Shape: {{ behavioral_shape }}</li>
+                    <li class="list-group-item">Environmental Data Shape: {{ environmental_shape }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Get Started</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Start exploring the brain disease prediction system by navigating to the Train Models or Predict pages:</p>
+                <a href="/train" class="btn btn-primary">Train Models</a>
+                <a href="/predict" class="btn btn-success">Predict</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

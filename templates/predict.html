@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Predict{% endblock %}
+
+{% block content %}
+    <h1>Enter Data for Prediction</h1>
+    <form action="/predict" method="post">
+        <h2>Genomic Data</h2>
+        <p>Enter genomic data values. Genomic data consists of 500 features.</p>
+        {% for i in range(500) %}
+        <input type="text" name="genomic_{{ i }}" value="{{ sample_genomic_data[i] }}">
+        {% endfor %}
+        
+        <h2>Clinical Data</h2>
+        <p>Enter clinical data values. Clinical data consists of 3 features.</p>
+        {% for i in range(3) %}
+        <input type="text" name="clinical_{{ i }}" value="{{ sample_clinical_data[i] }}">
+        {% endfor %}
+
+        <h2>Imaging Data</h2>
+        <p>Enter imaging data values. Imaging data consists of 4096 features.</p>
+        <!-- Add input fields for imaging data here -->
+
+        <h2>Biomarker Data</h2>
+        <p>Enter biomarker data values. Biomarker data consists of 100 features.</p>
+        {% for i in range(100) %}
+        <input type="text" name="biomarker_{{ i }}" value="{{ sample_biomarker_data[i] }}">
+        {% endfor %}
+
+        <h2>Behavioral Data</h2>
+        <p>Enter behavioral data values. Behavioral data consists of 50 features.</p>
+        {% for i in range(50) %}
+        <input type="text" name="behavioral_{{ i }}" value="{{ sample_behavioral_data[i] }}">
+        {% endfor %}
+
+        <h2>Environmental Data</h2>
+        <p>Enter environmental data values. Environmental data consists of 20 features.</p>
+        {% for i in range(20) %}
+        <input type="text" name="environmental_{{ i }}" value="{{ sample_environmental_data[i] }}">
+        {% endfor %}
+
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+{% endblock %}

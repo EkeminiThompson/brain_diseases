@@ -1,0 +1,7 @@
+flask 
+pandas 
+numpy 
+nibabel 
+scikit-learn 
+tensorflow 
+joblib
